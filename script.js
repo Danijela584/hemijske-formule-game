@@ -59,6 +59,7 @@ function loadLevel(level) {
     shuffledFormulas.forEach((compound, index) => {
         const formulaButton = document.createElement('button');
         formulaButton.textContent = compound.formula;
+        formulaButton.dataset.name = compound.name;
         formulaButton.id = `formula-${index}`;
         formulaButton.onclick = () => selectFormula(index);
         formulaDiv.appendChild(formulaButton);
@@ -95,7 +96,7 @@ function checkMatch() {
     if (selectedFormula !== null && selectedName !== null) {
         const formulaButton = document.getElementById(`formula-${selectedFormula}`);
         const nameButton = document.getElementById(`name-${selectedName}`);
-        if (levels[currentLevel][selectedFormula].name === levels[currentLevel][selectedName].name) {
+        if (formulaButton.dataset.name === nameButton.textContent) {
             formulaButton.style.backgroundColor = 'green';
             nameButton.style.backgroundColor = 'green';
             setTimeout(() => {
