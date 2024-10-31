@@ -122,10 +122,16 @@ function checkLevelCompletion() {
     if (remainingFormulas.length === 0) {
         currentLevel++;
         if (currentLevel < levels.length) {
-            alert(`Great job! Get ready for Level ${currentLevel + 1}`);
+            let affirmation = '';
+            if (currentLevel === 1) {
+                affirmation = 'Svaki izazov koji sretnem u hemiji je prilika za rast i učenje.';
+            } else if (currentLevel === 2) {
+                affirmation = 'Posvećen/posvećena sam i uporan/uporna, i moj trud u učenju hemije će dovesti do uspeha.';
+            }
+            alert(`Great job! ${affirmation} Get ready for Level ${currentLevel + 1}`);
             loadLevel(currentLevel);
         } else {
-            alert('Congratulations! You have completed all levels!');
+            alert('Congratulations! Sposoban/sposobna sam da razumem i savladam složene hemijske pojmove.');
         }
     }
 }
