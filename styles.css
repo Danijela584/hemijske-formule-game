@@ -14,11 +14,14 @@ body {
     margin: 0 20px;
 }
 
-label {
+button {
     display: block;
     margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-input {
-    margin-bottom: 10px;
+button.selected {
+    border: 2px solid blue;
 }
