@@ -51,18 +51,21 @@ const compounds = [
 ];
 
 // Shuffle arrays
-compounds.sort(() => Math.random() - 0.5);
+const shuffledFormulas = [...compounds].sort(() => Math.random() - 0.5);
+const shuffledNames = [...compounds].sort(() => Math.random() - 0.5);
 
 // Insert formulas into the HTML
 const formulaDiv = document.getElementById('formulas');
 const nameDiv = document.getElementById('names');
-compounds.forEach((compound, index) => {
+shuffledFormulas.forEach((compound, index) => {
     const formulaButton = document.createElement('button');
     formulaButton.textContent = compound.formula;
     formulaButton.id = `formula-${index}`;
     formulaButton.onclick = () => selectFormula(index);
     formulaDiv.appendChild(formulaButton);
+});
 
+shuffledNames.forEach((compound, index) => {
     const nameButton = document.createElement('button');
     nameButton.textContent = compound.name;
     nameButton.id = `name-${index}`;
@@ -95,7 +98,7 @@ function checkMatch() {
     if (selectedFormula !== null && selectedName !== null) {
         const formulaButton = document.getElementById(`formula-${selectedFormula}`);
         const nameButton = document.getElementById(`name-${selectedName}`);
-        if (compounds[selectedFormula].name === compounds[selectedName].name) {
+        if (shuffledFormulas[selectedFormula].name === shuffledNames[selectedName].name) {
             formulaButton.style.backgroundColor = 'green';
             nameButton.style.backgroundColor = 'green';
         } else {
