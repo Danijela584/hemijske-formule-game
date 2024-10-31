@@ -9,11 +9,11 @@ const levels = [
         { formula: 'KOH', name: 'Kalijum hidroksid' },
         { formula: 'Ca(OH)₂', name: 'Kalcijum hidroksid' },
         { formula: 'NH₃', name: 'Amonijak' },
-        { formula: 'Mg(OH)₂', name: 'Magnezijum hidroksid' }
+        { formula: 'Mg(OH)₂', name: 'Magnezijum hidroksid' },
+        { formula: 'NaCl', name: 'Natrijum-hlorid' },
+        { formula: 'KBr', name: 'Kalijum-bromid' }
     ],
     [
-        { formula: 'NaCl', name: 'Natrijum-hlorid' },
-        { formula: 'KBr', name: 'Kalijum-bromid' },
         { formula: 'CaCO₃', name: 'Kalcijum-karbonat' },
         { formula: 'Na₂SO₄', name: 'Natrijum-sulfat' },
         { formula: 'KNO₃', name: 'Kalijum-nitrat' },
@@ -21,19 +21,25 @@ const levels = [
         { formula: 'SO₂', name: 'Sumpor(IV)-oksid' },
         { formula: 'NO₂', name: 'Azot(IV)-oksid' },
         { formula: 'N₂O', name: 'Azot(I)-oksid' },
-        { formula: 'P₄O₁₀', name: 'Fosfor(V)-oksid' }
-    ],
-    [
+        { formula: 'P₄O₁₀', name: 'Fosfor(V)-oksid' },
         { formula: 'H₂O', name: 'Voda' },
         { formula: 'H₂O₂', name: 'Vodonik-peroksid' },
         { formula: 'NaHCO₃', name: 'Natrijum-hidrogenkarbonat' },
-        { formula: 'CaCl₂', name: 'Kalcijum-hlorid' },
+        { formula: 'CaCl₂', name: 'Kalcijum-hlorid' }
+    ],
+    [
         { formula: 'MgSO₄', name: 'Magnezijum-sulfat' },
         { formula: 'Fe₂O₃', name: 'Gvožđe(III)-oksid' },
         { formula: 'CuSO₄', name: 'Bakar(II)-sulfat' },
         { formula: 'ZnO', name: 'Cink-oksid' },
         { formula: 'Al₂O₃', name: 'Aluminijum-oksid' },
-        { formula: 'PbO₂', name: 'Olovo(IV)-oksid' }
+        { formula: 'PbO₂', name: 'Olovo(IV)-oksid' },
+        { formula: 'H₃PO₄', name: 'Fosforna kiselina' },
+        { formula: 'HBr', name: 'Bromovodonična kiselina' },
+        { formula: 'HI', name: 'Jodovodonična kiselina' },
+        { formula: 'H₂S', name: 'Vodonik-sulfid' },
+        { formula: 'LiOH', name: 'Litijum hidroksid' },
+        { formula: 'Ba(OH)₂', name: 'Barijum hidroksid' }
     ]
 ];
 
